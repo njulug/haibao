@@ -1,0 +1,10 @@
+dir="/Users/macbookair/Documents/WORK/BLOGS"
+cd $dir/source_haibao/_posts
+file=$1".md"
+echo "---" >$file
+echo "title: "$1 >>$file 
+time=`echo $1|grep -E "\d{4}.\d{1,2}.\d{1,2}" -o`
+echo "date: "$time  >>$file 
+echo "tags: " >> $file
+echo "---" >> $file
+echo "![]("$2")" >>$file
