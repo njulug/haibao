@@ -1,0 +1,12 @@
+#本地上传图片，压缩，生成文件，
+dir="/Users/macbookair/Documents/WORK/BLOGS"
+cd $dir/source_haibao/_posts
+file=$1".md"
+echo "---" >$file
+echo "title: "$1 >>$file 
+time=`echo $1|grep -E "\d{4}.\d{1,2}.\d{1,2}" -o`
+echo "date: "$time  >>$file 
+echo "tags: " >> $file
+echo "---" >> $file
+echo "![]("$2")" >>$file
+/usr/local/bin/convert -sample 1080x1920 ../$2 ../$2
