@@ -3,7 +3,7 @@ cd $dir/source_haibao/_posts
 file=$1".md"
 echo "---" >$file
 echo "title: "$1 >>$file 
-time=`echo $1|grep -E "\d{4}.\d{1,2}.\d{1,2}" -o`
+time=`echo $1|grep -E "\d{4}.\d{1,2}.\d{1,2}" -o|tail -1`
 echo "date: "$time  >>$file 
 echo "tags: " >> $file
 echo "---" >> $file
