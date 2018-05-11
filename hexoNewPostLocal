@@ -9,4 +9,4 @@ echo "date: "$time  >>$file
 echo "tags: " >> $file
 echo "---" >> $file
 echo "![]("$2")" >>$file
-/usr/local/bin/convert -sample 1080x1920 ../$2 ../$2
+/usr/local/bin/convert -sample 720x1280 ../$2 ../$2
